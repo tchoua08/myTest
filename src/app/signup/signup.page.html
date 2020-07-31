@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-button fill="clear" mode="md" (click)="backPage()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Sign Up</ion-title>
+
+    <ion-progress-bar  value=".4"></ion-progress-bar>
+  </ion-toolbar>
+  </ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card class="ion-text-center">
+    <ion-card-content >
+      
+     Wammer Turns Sharing Fun Photos and Videos with Your Friends into a Game
+    </ion-card-content>
+  </ion-card>
+
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">First name</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Last name</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [type]="passwordType" required ></ion-input>
+      <ion-icon name="eye-outline" *ngIf="passwordShown===true" slot="end" (click)="togglePassword()"></ion-icon>
+      <ion-icon name="eye-off-outline" *ngIf="passwordShown===false" slot="end" (click)="togglePassword()"></ion-icon>
+    </ion-item>
+
+
+    <ion-card class="ion-text-center">
+      <ion-card-content >
+        By continuing you agree to the Wammer<a href="#"  [target]="'_blank'">Terms of service</a> and <a href="#"  [target]="'_blank'">Privacy policy</a>
+      </ion-card-content>
+    </ion-card>
+
+   
+  </form>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col>
+      <ion-button type="submit"  expand="block">Back</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button type="submit"  expand="block" fill="outline">Next</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
+
